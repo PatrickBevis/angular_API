@@ -1,0 +1,12 @@
+<div class="mt-5 ml-5">
+  @for (item of recipes(); track $index) {
+    <p>Id: {{ item.id }}</p>
+    <p>Repice: {{ item.name }}</p>
+     <p>Description: {{item.description}}</p>
+    <p>Time: {{ item.time }} minutes</p>
+    <p> Difficulty: {{ item.difficulty }}/5</p>
+    <p>People: {{ item.nbPeople }}</p>
+    <p class="mb-5">Price: {{ item.price }} €</p>
+
+  }
+</div>

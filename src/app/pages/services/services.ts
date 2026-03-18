@@ -9,7 +9,7 @@ import { Ingredient } from '../../services/ingredient';
 })
 
 export class Services implements OnInit {
-   pr = inject(Ingredient);
+   ing = inject(Ingredient);
 
   ingredients=signal<any[]>([]);
 
@@ -27,10 +27,10 @@ export class Services implements OnInit {
     //   },
 
     // })
-    this.pr.getIngredients().subscribe(res => 
+    this.ing.getIngredients().subscribe(data => 
     {
-      console.log(res);
-      this.ingredients.set(res);
+      console.log(data);
+      this.ingredients.set(data);
 
     }
     )
